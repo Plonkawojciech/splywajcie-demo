@@ -31,7 +31,7 @@ export function ReservationForm({ rivers, selected }: { rivers: River[]; selecte
       <label>Wiadomość<textarea name="message" rows={3} placeholder="Skąd jedziecie, czy są dzieci, czy potrzebny nocleg w bazie" /></label>
       {state.message && !state.ok && <p className="form-err" role="alert">{state.message}</p>}
       <button className="btn btn-accent" disabled={pending}>{pending ? 'Wysyłanie…' : 'Wyślij zgłoszenie'}</button>
-      <p className="note">Zgłoszenie trafia do panelu. Rezerwację potwierdza zaliczka 30 % wpłacona po rozmowie telefonicznej.</p>
+      <p className="note">Zgłoszenie trafia do panelu. Rezerwację potwierdza zaliczka 30 % wpłacona po rozmowie telefonicznej. Wersja demonstracyjna: dane trafiają do testowego panelu Programo i są kasowane, nie wpisuj prawdziwych danych osobowych.</p>
     </form>
   )
 }

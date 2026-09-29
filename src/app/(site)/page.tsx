@@ -33,7 +33,7 @@ export default async function Home() {
           return (
             <Link key={r.id} href={`/rzeki/${r.slug}`} className="board-item">
               <b>{r.name}</b>
-              <span>{sec ? `${sec.title}${sec.km ? ` · ${sec.km} km` : ''}${sec.hours ? ` · ${sec.hours} h` : ''}` : r.region}</span>
+              <span>{sec ? `${sec.title}${sec.km ? ` · ${sec.km} km` : ''}${sec.hours ? ` · ${/\d$/.test(sec.hours) ? sec.hours + ' h' : sec.hours}` : ''}` : r.region}</span>
             </Link>
           )
         })}
@@ -130,7 +130,7 @@ export default async function Home() {
         <div>
           <p className="kicker">Rezerwacja</p>
           <h2 className="h2">Termin, rzeka, liczba kajaków. Resztę ustalimy przez telefon.</h2>
-          <p className="lead">Rezerwację potwierdza zaliczka 30 %. Do 14 dni przed spływem można bezkosztowo zmniejszyć liczbę kajaków. Przy ostrzeżeniu meteorologicznym przekładamy termin, zaliczka nie przepada.</p>
+          <p className="lead">Rezerwację potwierdza zaliczka 30 %. Do 14 dni przed spływem (na długie weekendy majowe i czerwcowe do 60 dni) można bezkosztowo zmniejszyć liczbę kajaków. Przy ostrzeżeniu meteorologicznym przekładamy termin, zaliczka nie przepada.</p>
           <p className="big-tel"><a href={`tel:${tel}`}>{s.phone}</a></p>
         </div>
         <div className="aside"><ReservationForm rivers={rivers.docs.map((r) => ({ id: r.id, name: r.name }))} /></div>

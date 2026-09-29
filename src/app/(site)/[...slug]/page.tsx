@@ -34,7 +34,7 @@ export default async function Page({ params }: Props) {
       <div className="section"><div className="wrap">
         <div className="crumbs"><Link href="/">Start</Link><span>/</span><span>Rzeki</span></div>
         <h1 className="h1">Rzeki i odcinki</h1>
-        <p className="lead">Opisujemy tylko rzeki, którymi pływamy wielokrotnie w ciągu roku. Informacje są orientacyjne, przed spływem potwierdzamy warunki w terenie, bo wieczna jest tylko zmiana.</p>
+        <p className="lead">Opisujemy tylko rzeki, którymi pływamy wielokrotnie w ciągu roku. Informacje są orientacyjne, przed spływem potwierdzamy warunki w terenie, bo wieczna jest tylko zmiana. Kilometry i czasy w demie są przybliżone i do potwierdzenia przy wdrożeniu.</p>
         <div className="rivers" style={{ marginTop: 44 }}>
           {r.docs.map((x) => (
             <Link key={x.id} href={`/rzeki/${x.slug}`} className="river">
@@ -73,7 +73,7 @@ export default async function Page({ params }: Props) {
             {(r.sections || []).map((sec: any) => (
               <section key={sec.id} className="osec">
                 <h2 className="h3">{sec.title}</h2>
-                {(sec.km || sec.hours) && <p className="osec-meta">{[sec.km ? `${sec.km} km` : null, sec.hours ? `około ${sec.hours} h` : null].filter(Boolean).join(' · ')}</p>}
+                {(sec.km || sec.hours) && <p className="osec-meta">{[sec.km ? `${sec.km} km` : null, sec.hours ? (/\d$/.test(sec.hours) ? `około ${sec.hours} h` : sec.hours) : null].filter(Boolean).join(' · ')}</p>}
                 {sec.body && <p>{sec.body}</p>}
               </section>
             ))}
@@ -132,7 +132,7 @@ export default async function Page({ params }: Props) {
                   {g.maker && <span className="kicker" style={{ marginBottom: 6 }}>{g.maker}</span>}
                   <h2 className="h3">{g.name}</h2>
                   <p>{g.body}</p>
-                  {g.specs && g.specs.length > 0 && <table className="specs"><tbody>{g.specs.map((x: any) => <tr key={x.id}><td>{x.key}</td><td>{x.value}</td></tr>)}</tbody></table>}
+                  {g.specs && g.specs.length > 0 && <table className="specs"><tbody>{g.specs.map((x: any) => <tr key={x.id}><th scope="row">{x.key}</th><td>{x.value}</td></tr>)}</tbody></table>}
                 </div>
               </article>
             )
