@@ -9,7 +9,7 @@ export const Reservations: CollectionConfig = {
     defaultColumns: ['name', 'riverName', 'dateFrom', 'kayaks', 'persons', 'phone', 'status', 'createdAt'],
     description: 'Każde zgłoszenie ze strony. Status i zaliczkę ustawia Sławek po telefonie.',
   },
-  access: { create: () => true },
+  access: { create: () => false, read: ({ req }) => !!req.user },
   fields: [
     { name: 'river', label: 'Rzeka', type: 'relationship', relationTo: 'rivers' },
     { name: 'riverName', label: 'Rzeka', type: 'text', virtual: 'river.name', admin: { hidden: true } },
