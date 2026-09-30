@@ -50,16 +50,16 @@ async function main() {
   console.log('[seed] rzeki:', rivers.length)
 
   const packages: any[] = [
-    { name: 'Wypożyczalnia kajaków', slug: 'wypozyczalnia', order: 1, price: 120, unit: '/kajak/dzień', imageUrl: S + 'naglowki/19.jpg',
+    { name: 'Wypożyczalnia kajaków', slug: 'wypozyczalnia', order: 1, price: 120, unit: '/kajak/dzień', imageUrl: '/img/gen/pack-wypozyczalnia.jpg',
       lead: 'Dwuosobowy kajak Vista Perception z kompletem: wiosła, kamizelki, worki wodoszczelne. Transport na start i z mety w cenie.',
       body: 'W cenie dnia wynajmu dostajesz dwuosobowy kajak turystyczny Vista Perception z regulowanymi fotelami i neoprenowymi nakładkami, dwa lekkie wiosła Egalis, dwa worki wodoszczelne Fjord Nansen 30 l i dwie kamizelki Aquarius. Na życzenie kamizelka ratunkowa i trzecie siedzisko dla kilkulatka. W ramach przewozu kajaków zabieramy nieodpłatnie do 8 osób; większa grupa jedzie własnymi autami na start, a kierowcy wracają razem z kajakami.',
       includes: ['2-osobowy kajak Vista Perception (Wave Sport)', '2 wiosła aluminiowe Egalis z piórem fibrylonowym', '2 worki wodoszczelne Fjord Nansen 30 l', '2 kamizelki asekuracyjne Aquarius', 'Kamizelka ratunkowa i trzecie siedzisko dla dziecka w razie potrzeby', 'Przewóz kajaków: Piława, Rurzyca, Dobrzyca, Gwda'],
       priceNote: 'Inne, dalsze rzeki wyceniamy dodatkowo. Osoby indywidualne ubezpieczają się od NNW we własnym zakresie.' },
-    { name: 'Spływ grupowy „na piątkę”', slug: 'splyw-grupowy', order: 2, price: 300, unit: '/os./dzień', minPersons: 20, imageUrl: S + 'naglowki/18.jpg',
+    { name: 'Spływ grupowy „na piątkę”', slug: 'splyw-grupowy', order: 2, price: 300, unit: '/os./dzień', minPersons: 20, imageUrl: '/img/gen/pack-grupa.jpg',
       lead: 'Jednodniowy spływ z instruktorem kajakarstwa i ratownikiem WOPR, zdjęciami i filmem ze spływu. Dla firm, szkół, rodzin i grup znajomych.',
       body: 'Co roku z naszych spływów grupowych korzysta kilkaset osób. Uczestnikami mogą być amatorzy i osoby nieumiejące pływać: przez cały spływ są pod opieką instruktora i ratowników. Dobieramy rzekę i odcinek tak, żeby było bezpiecznie i przyjemnie, zwykle Piławę albo Rurzycę.',
       includes: ['2-osobowe kajaki Vista Perception i wiosła Egalis Boreal', 'Kamizelki Aquarius i worki wodoszczelne Fjord Nansen 30 l na osobę', 'Instruktor rekreacji ruchowej o specjalności kajakarstwo i instruktaż przed spływem', 'Ratownik WOPR, powyżej 20 uczestników dwóch ratowników', 'Apteczka i podręczna pomoc medyczna', 'Ponad 100 zdjęć w wysokiej rozdzielczości i film Full HD ze spływu, udostępnione online', 'Przewóz kajaków na start i z mety'] },
-    { name: 'Spływy wielodniowe i inne rzeki', slug: 'wielodniowe', order: 3, imageUrl: S + 'naglowki/9.jpg',
+    { name: 'Spływy wielodniowe i inne rzeki', slug: 'wielodniowe', order: 3, imageUrl: '/img/gen/pack-wielodniowe.jpg',
       lead: 'Kilka dni na Brdzie, Drawie, Łupawie albo dopływach Gwdy z noclegami na polach namiotowych i w agroturystyce. Dobieramy rzekę do grupy i prowadzimy ją bezpiecznie przez cały szlak.',
       body: 'Organizujemy spływy kilkudniowe: dobieramy rzekę, przeprowadzamy grupę przez zaplanowany szlak, a dzięki znajomości pól namiotowych i gospodarstw agroturystycznych pomagamy wybrać nocleg. Gdy chcecie płynąć inną rzeką niż nasze domowe, dowozimy sprzęt na wskazane miejsce.',
       includes: ['Plan trasy z noclegami', 'Komplet sprzętu jak w wypożyczalni', 'Transport kajaków na start i z mety, także na dalsze rzeki', 'Opieka instruktora na życzenie'],
@@ -104,7 +104,7 @@ async function main() {
     banner: 'Sezon trwa. Na długie weekendy rezerwuj z wyprzedzeniem.',
     heroTitle: 'Spływy kajakowe Piławą, Rurzycą i Gwdą',
     heroText: 'Wypożyczalnia kajaków i organizator spływów w północnej Wielkopolsce. Baza w Szwecji koło Wałcza, kajaki Vista Perception, instruktor i ratownik na spływach grupowych. Nie jesteśmy nastawieni na ilość, znamy za to dziesiątki szlaków.',
-    heroImageUrl: S + 'naglowki/17.jpg',
+    heroImageUrl: '/img/gen/hero.jpg',
     about: 'Od lat obsługujemy spływy kajakowe na dopływach Gwdy: Piławie, Rurzycy, Dobrzycy i Czernicy oraz na samej Gwdzie. Większość spływów zaczyna się w Szwecji i Nadarzycach. Pływamy też na Brdzie, Drawie, Łupawie, Słupi, Obrze i Wdzie.',
     contactName: 'Sławek', phone: '668 260 240', email: 'kontakt@splywajcie.pl',
     baseName: 'Pole namiotowe „Nad Zatoczką” w Szwecji', baseAddress: 'ul. Nadrzeczna 4\n78-611 Szwecja', coords: '53.34381, 16.57134',

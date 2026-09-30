@@ -22,7 +22,7 @@ export default async function Home() {
           <h1 className="display">{s.heroTitle}</h1>
           <p className="lead">{s.heroText}</p>
           <div className="cta-row">
-            <Link className="btn btn-accent" href="/rezerwacja">Zarezerwuj kajaki</Link>
+            <Link className="btn btn-white" href="/rezerwacja">Zarezerwuj kajaki</Link>
             <a className="btn btn-line" href={`tel:${tel}`}>{s.phone}</a>
           </div>
         </div>
@@ -40,9 +40,8 @@ export default async function Home() {
       </div></div>
 
       <section className="section"><div className="wrap">
-        <div className="sechead">
-          <div><p className="kicker">Oferta</p><h2 className="h2">Kajak na dzień, spływ dla grupy albo wyprawa na kilka dni</h2></div>
-          <Link className="textlink" href="/cennik">Pełny cennik</Link>
+        <div className="sechead center">
+          <p className="kicker">Oferta</p><h2 className="h2">Kajak na dzień, spływ dla grupy albo wyprawa na kilka dni</h2><span className="wave" />
         </div>
         <div className="packs">
           {packages.docs.map((p) => {
@@ -60,13 +59,13 @@ export default async function Home() {
             )
           })}
         </div>
+        <div className="more"><Link className="btn btn-line" href="/cennik">Pełny cennik i warunki</Link></div>
       </div></section>
 
       <section className="section tint"><div className="wrap">
-        <div className="sechead">
-          <div><p className="kicker">Rzeki</p><h2 className="h2">Pływamy tam, gdzie znamy każdą zwałkę</h2>
-            <p className="lead">Głównie dopływy Gwdy w północnej Wielkopolsce: krystaliczna woda, las po obu brzegach, start w Szwecji albo Nadarzycach. Na życzenie dowozimy kajaki na inne rzeki.</p></div>
-          <Link className="textlink" href="/rzeki">Wszystkie rzeki</Link>
+        <div className="sechead center">
+          <p className="kicker">Rzeki</p><h2 className="h2">Pływamy tam, gdzie znamy każdą zwałkę</h2><span className="wave" />
+          <p className="lead">Głównie dopływy Gwdy w północnej Wielkopolsce: krystaliczna woda, las po obu brzegach, start w Szwecji albo Nadarzycach. Na życzenie dowozimy kajaki na inne rzeki.</p>
         </div>
         <div className="rivers">
           {rivers.docs.map((r) => (
@@ -77,10 +76,12 @@ export default async function Home() {
             </Link>
           ))}
         </div>
+        <div className="more"><Link className="btn btn-line" href="/rzeki">Wszystkie rzeki i odcinki</Link></div>
       </div></section>
 
       <section className="section"><div className="wrap split">
         <div>
+          <img className="basephoto" src="/img/gen/baza.jpg" alt="Pole namiotowe nad zatoką" loading="lazy" />
           <p className="kicker">Baza sprzętowa</p>
           <h2 className="h2">{s.baseName}</h2>
           <p className="lead">{s.baseNote}</p>
@@ -104,9 +105,8 @@ export default async function Home() {
 
       {news.docs.length > 0 && (
         <section className="section tint"><div className="wrap">
-          <div className="sechead">
-            <div><p className="kicker">Nowinki</p><h2 className="h2">Z rzek, na których byliśmy ostatnio</h2></div>
-            <Link className="textlink" href="/nowinki">Wszystkie wpisy</Link>
+          <div className="sechead center">
+            <p className="kicker">Nowinki</p><h2 className="h2">Z rzek, na których byliśmy ostatnio</h2><span className="wave" />
           </div>
           <div className="news">
             {news.docs.map((n) => {
@@ -123,10 +123,11 @@ export default async function Home() {
               )
             })}
           </div>
+          <div className="more"><Link className="btn btn-line" href="/nowinki">Wszystkie wpisy</Link></div>
         </div></section>
       )}
 
-      <section className="section navy"><div className="wrap split">
+      <section className="section navy photo" style={{ backgroundImage: "url(/img/gen/rzeka-las.jpg)" }}><div className="wrap split">
         <div>
           <p className="kicker">Rezerwacja</p>
           <h2 className="h2">Termin, rzeka, liczba kajaków. Resztę ustalimy przez telefon.</h2>
