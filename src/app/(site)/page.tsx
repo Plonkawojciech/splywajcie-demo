@@ -81,7 +81,7 @@ export default async function Home() {
 
       <section className="section"><div className="wrap split">
         <div>
-          <img className="basephoto" src="/img/gen/baza.jpg" alt="Pole namiotowe nad zatoką" loading="lazy" />
+          <img className="basephoto" src="/img/gen/baza-v2.jpg" alt="Kajaki na brzegu Piławy przy bazie" loading="lazy" />
           <p className="kicker">Baza sprzętowa</p>
           <h2 className="h2">{s.baseName}</h2>
           <p className="lead">{s.baseNote}</p>
